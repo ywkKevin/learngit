@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>detail</title>
+	<style type="text/css">
+		 body{color:#efd;background:#453;padding:0 5em;margin:0}
+		 h1{padding:2em 1em;background:#675}
+		 h2{color:#bf8;border-top:1px dotted #fff;margin-top:2em}
+		 p{margin:1em 0}
+ 	</style>
+</head>
+<body>
+	<form action="/detailUI/{{student.id}}/" method="post">  
+    {% csrf_token %}  
+	    <table border='true' width="80%">  
+	        <tr>  
+	            <td>id</td>  
+	            <td>  
+	                <input name="id" type="text" value="{{student.id}}" readonly="true" />  
+	            </td>  
+	        </tr>  
+	        <tr>  
+	            <td>name</td>  
+	            <td>  
+	                <input name="name" type="text" value="{{student.name}}"/>  
+	            </td>  
+	        </tr>  
+	        <tr>  
+	            <td>age</td>  
+	            <td>  
+	                <input name="age" type="text" value="{{student.age}}"/>  
+	            </td>  
+	        </tr>  
+	        <tr>  
+	            <td>sex</td>  
+	            <td>  
+	            	<input type="text" name="sex" value="{{student.sex}}"/>  
+	            </td>  
+	        </tr>  
+	    </table>  
+	    <input type="submit" name="confirm">
+	</form>  
+</body>
+</html>

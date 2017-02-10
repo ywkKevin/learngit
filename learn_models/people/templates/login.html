@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<style type="text/css">
+		 body{color:#efd;background:#453;padding:0 5em;margin:0}
+		 h1{padding:2em 1em;background:#675}
+		 h2{color:#bf8;border-top:1px dotted #fff;margin-top:2em}
+		 p{margin:1em 0}
+ 	</style>
+</head>
+<body>
+	<h1>Welcome to login!</h1>
+
+	<form action="/checkLogin/" method="post">
+		{% csrf_token %}
+		<h2>{{error}}</h2>
+		<h2>{{info}}</h2>
+		name: <input type="text" name="name" value=""><br>
+		password: <input type="password" name="password" value=""><br>
+
+		<input type="submit" name="login">
+		<a href="/register/">register</a>
+	</form>
+</body>
+</html>

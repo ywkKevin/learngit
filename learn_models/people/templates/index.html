@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<style type="text/css">
+		 body{color:#efd;background:#453;padding:0 5em;margin:0}
+		 h1{padding:2em 1em;background:#675}
+		 h2{color:#bf8;border-top:1px dotted #fff;margin-top:2em}
+		 p{margin:1em 0}
+ 	</style>
+</head>
+<body>
+	<h1>{{student.name}} Welcome!</h1>
+
+	name: <input type="text" name="name" value="{{student.name}}"><br>
+	age: <input type="text" name="age" value="{{student.age}}"><br>
+	sex: <input type="text" name="sex" value="{{student.sex}}"><br>
+
+	<a href="/student_List/">student_List</a>
+	<a href="/show_Password/{{student.id}}/">show_Password</a>
+	<a href="/login_Out">login_Out</a>
+</body>
+</html>
